@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "Golden Eco-friendly Makhar",
+    "description": "A beautiful, entirely eco-friendly Makhar with golden accents, perfect for medium-sized idols.",
+    "price": 1200,
+    "availability": "In Stock",
+    "image": "https://images.unsplash.com/photo-1601369324707-1bf16e3c09b6?w=600&h=400&fit=crop",
+    "tags": ["Eco-friendly", "Golden", "Medium"]
+  },
+  {
+    "id": "2",
+    "name": "Majestic Peacock Theme Makhar",
+    "description": "Handcrafted Makhar featuring an intricate peacock design with vibrant colors.",
+    "price": 2500,
+    "availability": "Out of Stock",
+    "image": "https://images.unsplash.com/photo-1631589332560-69022638a5b2?w=600&h=400&fit=crop",
+    "tags": ["Peacock", "Large", "Premium"]
+  },
+  {
+    "id": "3",
+    "name": "Classic Wooden Temple Makhar",
+    "description": "Traditional wooden temple design, deeply carved and polished.",
+    "price": 3500,
+    "availability": "In Stock",
+    "image": "https://images.unsplash.com/photo-1605349141940-5e34743e8bb5?w=600&h=400&fit=crop",
+    "tags": ["Wooden", "Traditional", "Large"]
+  }
+]

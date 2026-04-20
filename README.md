@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DesaiArts E-Commerce & Admin Dashboard
 
-## Getting Started
+Welcome to the DesaiArts E-Commerce project! This application is built with Next.js and Tailwind CSS. It serves as both the public storefront for selling Makhars and the minimal admin software to manage products.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Public Storefront**: Modern, festive, and responsive design.
+- **Makhars Listing**: Filter and sort products easily.
+- **Admin Dashboard**: Accessible at `/admin`. Allows adding, editing, and managing product inventory.
+- **Local Data Storage**: Uses a local JSON file (`data/products.json`) as a simple database for local development.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Ensure you have [Node.js](https://nodejs.org/) installed.
+2. Open your terminal and navigate to the project directory:
+   ```bash
+   cd desaiarts-ecommerce
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
+6. Open [http://localhost:3000/admin](http://localhost:3000/admin) to manage your products.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Important Note on Production Deployment (Vercel)
 
-## Learn More
+This application uses a local JSON file (`data/products.json`) to store product data. This is perfectly fine for running the software locally on your computer. 
 
-To learn more about Next.js, take a look at the following resources:
+However, when you deploy to a serverless environment like **Vercel**, the file system is read-only. Changes made via the Admin Dashboard in production will *not* persist. To make this work in production, you will need to replace the API logic in `src/app/api/products/route.ts` to connect to a real database (like Supabase, Firebase, or MongoDB). 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For the purposes of this zip-file deliverable, the local JSON approach keeps everything 100% free and self-contained without requiring external account setups.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Pushing to GitHub
 
-## Deploy on Vercel
+To store your code on GitHub:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Create a new empty repository on [GitHub](https://github.com/new).
+2. Open your terminal in the project directory.
+3. Initialize git and push your code:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit of DesaiArts"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+   git push -u origin main
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploying to Vercel
+
+The easiest way to deploy your Next.js app is to use the Vercel Platform.
+
+1. Go to [Vercel](https://vercel.com/) and sign up or log in.
+2. Click "Add New..." and select "Project".
+3. Import the GitHub repository you just created.
+4. Click "Deploy". Vercel will automatically build and deploy your project.
