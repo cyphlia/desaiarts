@@ -25,7 +25,8 @@ Welcome to the DesaiArts E-Commerce project! This application is built with Next
    npm run dev
    ```
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
-6. Open [http://localhost:3000/admin](http://localhost:3000/admin) to manage your products.
+6. Open [http://localhost:3000/admin](http://localhost:3000/admin) to manage your products. 
+   > **Security Note:** The admin dashboard is protected. The default credentials are Username: `admin` and Password: `desaiarts`. You can change these by setting `ADMIN_USERNAME` and `ADMIN_PASSWORD` environment variables in a `.env.local` file or in your deployment settings.
 
 ## Important Note on Production Deployment (Vercel)
 
