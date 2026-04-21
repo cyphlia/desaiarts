@@ -12,7 +12,6 @@ export default function Navbar() {
     { name: "Makhars", href: "/makhars" },
     { name: "About", href: "/about" },
     { name: "Other", href: "/other" },
-    { name: "Admin", href: "/admin" },
   ];
 
   return (

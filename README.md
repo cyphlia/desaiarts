@@ -6,8 +6,7 @@ Welcome to the DesaiArts E-Commerce project! This application is built with Next
 
 - **Public Storefront**: Modern, festive, and responsive design.
 - **Makhars Listing**: Filter and sort products easily.
-- **Admin Dashboard**: Accessible at `/admin`. Allows adding, editing, and managing product inventory.
-- **Local Data Storage**: Uses a local JSON file (`data/products.json`) as a simple database for local development.
+- **Local Database**: Uses a local JSON file (`data/products.json`) as a simple database.
 
 ## Running Locally
 
@@ -25,16 +24,13 @@ Welcome to the DesaiArts E-Commerce project! This application is built with Next
    npm run dev
    ```
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
-6. Open [http://localhost:3000/admin](http://localhost:3000/admin) to manage your products. 
-   > **Security Note:** The admin dashboard is protected. The default credentials are Username: `admin` and Password: `desaiarts`. You can change these by setting `ADMIN_USERNAME` and `ADMIN_PASSWORD` environment variables in a `.env.local` file or in your deployment settings.
 
-## Important Note on Production Deployment (Vercel)
+## Important Note on Production Deployment
 
-This application uses a local JSON file (`data/products.json`) to store product data. This is perfectly fine for running the software locally on your computer. 
+This application uses a local JSON file (`data/products.json`) to store product data. This acts as your database.
+To add new products or change pricing, simply edit this file and push your changes to GitHub. Vercel will automatically deploy your new changes to your live website. 
 
-However, when you deploy to a serverless environment like **Vercel**, the file system is read-only. Changes made via the Admin Dashboard in production will *not* persist. To make this work in production, you will need to replace the API logic in `src/app/api/products/route.ts` to connect to a real database (like Supabase, Firebase, or MongoDB). 
-
-For the purposes of this zip-file deliverable, the local JSON approach keeps everything 100% free and self-contained without requiring external account setups.
+For full deployment instructions, please read the `DEPLOYMENT_GUIDE.md` file included in this repository.
 
 ## Pushing to GitHub
 
